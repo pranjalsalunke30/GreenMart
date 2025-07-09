@@ -48,16 +48,16 @@ GreenMart is a full-featured e-commerce platform for gardening and plant lovers.
 ## 📸 Screenshots
 
 ### 🏠 Homepage  
-![Homepage](./screenshots/Home.png)
+![Homepage](../screenshots/Home.png)
 
 ### 🛒 Cart Page  
-![Cart](./screenshots/cart.png)
+![Cart](../screenshots/cart.png)
 
 ### 📦 Admin Panel  
-![Admin Panel](./screenshots/admin-panel.png)
+![Admin Panel](../screenshots/admin-panel.png)
 
 ### 🤖 Chatbot  
-![Chatbot](./screenshots/Chatbot.png)
+![Chatbot](../screenshots/Chatbot.png)
 
 ---
 
