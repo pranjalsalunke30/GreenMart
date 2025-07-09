@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/jpeg" href="/mainlogo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GreenMart</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  intent="WELCOME"
+  chat-title="Greenmart_Bot"
+  agent-id="dd35d83d-9afc-437a-a5ab-b358b1d00448"
+  language-code="en"
+  
+></df-messenger>
+
+<!-- <input type="file" id="imageUpload" accept="image/*" onchange="uploadImage()" />
+<p id="uploadStatus"></p>
+<script>
+  function uploadImage() {
+    let fileInput = document.getElementById("imageUpload").files[0];
+    if (!fileInput) {
+      alert("Please select an image!");
+      return;
+    }
+
+    let formData = new FormData();
+    formData.append("image", fileInput);
+    fetch("https://api.imgur.com/3/image", {
+      method: "POST",
+      headers: {
+        Authorization: "Client-ID edb070e625d54c0",
+      },
+      body: formData,
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Imgur Response:", data); // ✅ Debugging
+        if (data.success) {
+          let imageUrl = data.data.link;
+          document.getElementById("uploadStatus").innerHTML =
+            "Image uploaded! Share this link in chat: <a href='" +
+            imageUrl +
+            "' target='_blank'>" +
+            imageUrl +
+            "</a>";
+        } else {
+          alert("Upload failed! Error: " + data.data.error); // ✅ Show error details
+        }
+      })
+      .catch((error) => console.error("Fetch Error:", error));
+    
+    
+  }
+</script> -->
+
+
+  </body>
+</html>
