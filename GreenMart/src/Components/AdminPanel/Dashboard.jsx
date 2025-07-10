@@ -21,7 +21,7 @@ export default function Dashboard() {
 
   const fetchDashboardData = async () => {
     try {
-      const response = await axios.get("http://localhost:3002/api/dashboard/summary");
+      const response = await axios.get("https://greenmart-backend-ext8.onrender.com/api/dashboard/summary");
       setStats({
         orders: response.data.orders || 0,
         revenue: response.data.revenue || 0,
@@ -37,7 +37,7 @@ export default function Dashboard() {
 
   const fetchSalesData = async () => {
     try {
-      const response = await axios.get("http://localhost:3002/api/dashboard/sales");
+      const response = await axios.get("https://greenmart-backend-ext8.onrender.com/api/dashboard/sales");
       setSalesData(response.data.length > 0 ? response.data : []);
     } catch (error) {
       console.error("❌ Error fetching sales data:", error);
