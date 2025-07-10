@@ -170,7 +170,7 @@ useEffect(() => {
 
   const handleLogin = async () => {
     try {
-        const response = await fetch("http://localhost:3002/api/delivery/login-deliveryboy", {
+        const response = await fetch("https://greenmart-backend-ext8.onrender.com/api/delivery/login-deliveryboy", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ email, password }),
