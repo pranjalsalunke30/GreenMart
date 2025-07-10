@@ -21,7 +21,7 @@ const ChangePassword = () => {
     const fetchUserEmail = async () => {
       try {
         const response = await fetch(
-          `http://localhost:3002/getUserByEmail?email=${localStorage.getItem("email")}`
+          `https://greenmart-backend-ext8.onrender.com/getUserByEmail?email=${localStorage.getItem("email")}`
         );
         if (response.ok) {
           const data = await response.json();
@@ -83,7 +83,7 @@ const ChangePassword = () => {
     if (!validatePassword()) return;
 
     try {
-      const response = await axios.post("http://localhost:3002/changePassword", {
+      const response = await axios.post("https://greenmart-backend-ext8.onrender.com/changePassword", {
         email,
         currentPassword,
         newPassword,
