@@ -46,7 +46,7 @@ const FeedbackPage = () => {
     const storedEmail = localStorage.getItem("email"); // ✅ Get email
     if (storedEmail) {
       axios
-        .get("http://localhost:3002/getUserByEmail", {
+        .get("https://greenmart-backend-ext8.onrender.com/getUserByEmail", {
           params: { email: storedEmail },
         })
         .then((response) => {
@@ -87,7 +87,7 @@ const FeedbackPage = () => {
     if (image) formData.append("image", image);
   
     try {
-      const response = await fetch("http://localhost:3002/api/feedback/feedbackp", {
+      const response = await fetch("https://greenmart-backend-ext8.onrender.com/api/feedback/feedbackp", {
         method: "POST",
         body: formData,
       });
