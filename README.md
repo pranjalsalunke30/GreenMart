@@ -16,20 +16,15 @@ GreenMart is a full-featured e-commerce platform for gardening and plant lovers.
 - 🌐 Google Translation for regional language support
 - 👨‍🌾 Gardener appointment based on filters (state, age, language, etc.)
 - 🛠️ Admin panel with CRUD, image upload, and category management
-
----
-
+--  
 ## 🧠 Chatbot Feature
-
-- Upload images of plants or issues
 - Get instant care tips or usage guidance
 - Integrated using Dialogflow & Firebase
-
 ---
 
 ## 🌍 Google Translation Support
 
-- Powered by i18n and Google Translate API
+- Google Translate API
 - Users can switch between languages seamlessly
 - Especially helpful for Indian regional customers
 
@@ -51,10 +46,10 @@ GreenMart is a full-featured e-commerce platform for gardening and plant lovers.
 ![Homepage](./GreenMart/screenshots/Home.png)
 
 ### 🛒 Cart Page  
-![Cart](../screenshots/cart.png)
+![Cart](../screenshots/CartPage.png)
 
 ### 📦 Admin Panel  
-![Admin Panel](../screenshots/admin-panel.png)
+![Admin Panel](../screenshots/AdminPage.png)
 
 ### 🤖 Chatbot  
 ![Chatbot](./GreenMart/screenshots/Chatbot.png)
