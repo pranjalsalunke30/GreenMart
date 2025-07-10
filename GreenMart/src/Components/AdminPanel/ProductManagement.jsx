@@ -59,7 +59,7 @@ const ProductManagement = () => {
   const fetchProducts = async () => {
     setIsLoading(true);
     try {
-      const response = await axios.get("http://localhost:3002/api/products");
+      const response = await axios.get("https://greenmart-backend-ext8.onrender.com/api/products");
       setProducts(response.data);
     } catch (error) {
       console.error("Error fetching products:", error);
@@ -79,7 +79,7 @@ const ProductManagement = () => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          await axios.delete(`http://localhost:3002/api/products/${id}`);
+          await axios.delete(`https://greenmart-backend-ext8.onrender.com/api/products/${id}`);
           setProducts(products.filter((product) => product.idproducts !== id));
 
           Swal.fire({
@@ -141,7 +141,7 @@ const ProductManagement = () => {
     formData.append("stock", newProduct.stock);
 
     try {
-      await axios.post("http://localhost:3002/api/addproduct", formData, {
+      await axios.post("https://greenmart-backend-ext8.onrender.com/api/addproduct", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
@@ -230,7 +230,7 @@ const handleUpdateProduct = async () => {
 
   try {
     const response = await axios.put(
-      `http://localhost:3002/api/products/${editProduct.idproducts}`,
+      `https://greenmart-backend-ext8.onrender.com/api/products/${editProduct.idproducts}`,
       formData,
       { headers: { "Content-Type": "multipart/form-data" } }
     );
@@ -481,7 +481,7 @@ const handleUpdateProduct = async () => {
                       <td className="p-3">
                         {product.image_name && (
                           <img
-                            src={`http://localhost:3002/ProductImg/${product.image_name}`}
+                            src={`https://greenmart-backend-ext8.onrender.com/ProductImg/${product.image_name}`}
                             alt="Product"
                             className="w-20 h-20 object-cover"
                           />
@@ -600,7 +600,7 @@ const handleUpdateProduct = async () => {
                 />
                 {editProduct.existingImage && (
                   <img
-                    src={`http://localhost:3002/ProductImg/${editProduct.existingImage}`}
+                    src={`https://greenmart-backend-ext8.onrender.com/ProductImg/${editProduct.existingImage}`}
                     alt="Current Product"
                     className="w-20 h-20 object-cover"
                   />
