@@ -28,7 +28,7 @@ const ResetPassword = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:3002/api/reset-password", { token, password });
+      const response = await axios.post("https://greenmart-backend-ext8.onrender.com/api/reset-password", { token, password });
       setMessage(response.data.message);
       setTimeout(() => navigate("/login"), 3000);
     } catch (error) {
