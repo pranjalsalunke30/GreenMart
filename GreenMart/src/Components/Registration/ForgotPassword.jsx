@@ -29,7 +29,7 @@ const ForgotPassword = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3002/api/forgot-password",
+        "https://greenmart-backend-ext8.onrender.com/api/forgot-password",
         { email }
       );
       setMessage(response.data.message);
