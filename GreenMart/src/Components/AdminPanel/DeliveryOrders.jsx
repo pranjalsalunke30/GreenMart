@@ -32,7 +32,7 @@ export default function DeliveryOrders() {
         console.log("🟢 Fetching orders for delivery boy ID:", user.id);
 
         const res = await axios.get(
-          `http://localhost:3002/api/delivery/delivery-orders/${user.id}`,
+          `https://greenmart-backend-ext8.onrender.com/api/delivery/delivery-orders/${user.id}`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -77,7 +77,7 @@ export default function DeliveryOrders() {
       }
 
       const response = await fetch(
-        "http://localhost:3002/api/delivery/refresh-token",
+        "https://greenmart-backend-ext8.onrender.com/api/delivery/refresh-token",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -118,7 +118,7 @@ export default function DeliveryOrders() {
       }
 
       const response = await axios.post(
-        "http://localhost:3002/api/delivery/update-status",
+        "https://greenmart-backend-ext8.onrender.com/api/delivery/update-status",
         { order_ids: orderIds, status }, // Send all order IDs
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -144,7 +144,7 @@ export default function DeliveryOrders() {
       const refreshToken = localStorage.getItem("refreshToken");
 
       if (refreshToken) {
-        await fetch("http://localhost:3002/logout", {
+        await fetch("https://greenmart-backend-ext8.onrender.com/logout", {
           method: "DELETE",
           headers: {
             "Content-Type": "application/json",
