@@ -288,7 +288,7 @@ const ProductPage = () => {
                   <div className="w-[240px] md:w-[280px] flex flex-col dark:bg-gray-800 shadow-md rounded-lg overflow-hidden transform transition-all duration-300 hover:scale-100 hover:shadow-2xl border border-gray-300 dark:border-gray-700 mx-auto">
                     {/* Product Image */}
                     <img
-                      src={`http://localhost:3002/ProductImg/${product.image_name}`}
+                      src={`https://greenmart-backend-ext8.onrender.com/ProductImg/${product.image_name}`}
                       alt={product.name}
                       className="w-full h-40 object-cover cursor-pointer rounded-t-lg"
                       onClick={() => {
