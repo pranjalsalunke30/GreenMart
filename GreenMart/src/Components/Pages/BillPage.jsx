@@ -29,7 +29,7 @@ const BillPage = () => {
 
       try {
         const response = await axios.get(
-          "http://localhost:3002/getUserByEmail",
+          "https://greenmart-backend-ext8.onrender.com/getUserByEmail",
           {
             params: { email },
           }
@@ -55,7 +55,7 @@ const BillPage = () => {
       if (!user?.idusers) return;
 
       try {
-        const response = await axios.get("http://localhost:3002/userorders", {
+        const response = await axios.get("https://greenmart-backend-ext8.onrender.com/userorders", {
           params: { userId: user.idusers },
         });
 
@@ -134,7 +134,7 @@ const BillPage = () => {
 
       // ✅ Send Payment Data to Backend
       const paymentResponse = await axios.post(
-        "http://localhost:3002/payments",
+        "https://greenmart-backend-ext8.onrender.com/payments",
         {
           orderDetails, // Ensure order_id is stored properly
           total_amount: totalAmount,
@@ -151,7 +151,7 @@ const BillPage = () => {
 
         // ✅ Update Order Status
         const orderIds = selectedItems.map((item) => item.order_id);
-        await axios.post("http://localhost:3002/updateOrderStatus", {
+        await axios.post("https://greenmart-backend-ext8.onrender.com/updateOrderStatus", {
           orderIds,
           order_status: "shipped",
         });
@@ -276,7 +276,7 @@ const BillPage = () => {
                 {/* Product Image */}
                 <div className="flex justify-center">
                   <img
-                    src={`http://localhost:3002/ProductImg/${item.image_name}`}
+                    src={`https://greenmart-backend-ext8.onrender.com/ProductImg/${item.image_name}`}
                     alt={item.product_name}
                     className="w-20 h-20 rounded-lg object-cover shadow-md"
                   />
