@@ -18,7 +18,7 @@ const AppointmentPage = () => {
   // Fetch the appointed gardener for the user
   useEffect(() => {
     if (user && user.idusers) {
-      axios.get(`http://localhost:3002/user-appointed-gardener?userId=${user.idusers}`)
+      axios.get(`https://greenmart-backend-ext8.onrender.com/user-appointed-gardener?userId=${user.idusers}`)
         .then((response) => {
           setAppointedGardenerId(response.data.gardenerId);
         })
@@ -59,7 +59,7 @@ const AppointmentPage = () => {
     }
 
     try {
-      const response = await axios.get("http://localhost:3002/gardeners", {
+      const response = await axios.get("https://greenmart-backend-ext8.onrender.com/gardeners", {
         params: formData,
       });
       setGardeners(response.data);
