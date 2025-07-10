@@ -65,7 +65,7 @@ const ProductDetails = () => {
     const yPercent = (y / imageContainer.height) * 100;
 
     setZoomedImage({
-      src: `http://localhost:3002/ProductImg/${product.image_name}`, // ✅ Corrected image path
+      src: `https://greenmart-backend-ext8.onrender.com/ProductImg/${product.image_name}`, // ✅ Corrected image path
       x: xPercent,
       y: yPercent,
     });
@@ -111,7 +111,7 @@ useEffect(() => {
 
   
     try {
-      const response = await axios.post("http://localhost:3002/orders", {
+      const response = await axios.post("https://greenmart-backend-ext8.onrender.com/orders", {
         userId: user.idusers,
         productId: product.idproducts,
       
