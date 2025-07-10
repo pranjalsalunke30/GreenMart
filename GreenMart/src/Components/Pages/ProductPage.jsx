@@ -23,7 +23,7 @@ const ProductPage = () => {
   const fetchProducts = async (category) => {
     try {
       const response = await axios.get(
-        "http://localhost:3002/api/allproducts",
+        "https://greenmart-backend-ext8.onrender.com/api/allproducts",
         {
           params: { category },
         }
@@ -100,7 +100,7 @@ const ProductPage = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:3002/orders", {
+      const response = await axios.post("https://greenmart-backend-ext8.onrender.com/orders", {
         userId: user.idusers,
         productId: product.idproducts,
         quantity: 1,
@@ -359,7 +359,7 @@ const ProductPage = () => {
 
             {/* Product Details */}
             <img
-              src={`http://localhost:3002/ProductImg/${selectedProduct.image_name}`}
+              src={`https://greenmart-backend-ext8.onrender.com/ProductImg/${selectedProduct.image_name}`}
               alt={selectedProduct.name}
               className="object-cover w-full mb-3 rounded-lg h-[300px] md:h-[250px]"
             />
