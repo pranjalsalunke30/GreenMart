@@ -23,7 +23,7 @@ const Sidebar = ({ fetchUserData }) => {  // ✅ Accept fetchUserData as a prop
 
       try {
         const response = await fetch(
-          `http://localhost:3002/getUserByEmail?email=${email}`,
+          `https://greenmart-backend-ext8.onrender.com/getUserByEmail?email=${email}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -64,7 +64,7 @@ const Sidebar = ({ fetchUserData }) => {  // ✅ Accept fetchUserData as a prop
       const refreshToken = localStorage.getItem("refreshToken");
 
       if (refreshToken) {
-        await fetch("http://localhost:3002/logout", {
+        await fetch("https://greenmart-backend-ext8.onrender.com/logout", {
           method: "DELETE",
           headers: {
             "Content-Type": "application/json",
