@@ -15,7 +15,7 @@ const UserServices = () => {
       const fetchGardener = async () => {
         try {
           const response = await axios.get(
-            `http://localhost:3002/user-appointed-gardener`,
+            `https://greenmart-backend-ext8.onrender.com/user-appointed-gardener`,
             {
               params: { userId: user.idusers },
             }
@@ -42,7 +42,7 @@ const UserServices = () => {
     }
 
     try {
-      await axios.delete(`http://localhost:3002/remove-gardener`, {
+      await axios.delete(`https://greenmart-backend-ext8.onrender.com/remove-gardener`, {
         data: { userId: user.idusers, gardenerId: gardener.idgardeners },
       });
       setGardener(null);
