@@ -125,7 +125,7 @@ export default function DeliveryAuth({ setAuth }) {
   const handleRegister = async () => {
     try {
       const res = await axios.post(
-        "http://localhost:3002/api/delivery/register-deliveryboy",
+        "https://greenmart-backend-ext8.onrender.com/api/delivery/register-deliveryboy",
         {
           name,
           phone,
