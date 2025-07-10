@@ -73,7 +73,7 @@ const Cart = () => {
     if (!user || !user.idusers) return;
 
     try {
-      const response = await axios.get(`http://localhost:3002/userorders`, {
+      const response = await axios.get(`https://greenmart-backend-ext8.onrender.com/userorders`, {
         params: { userId: user.idusers },
       });
 
@@ -125,7 +125,7 @@ const Cart = () => {
           const updatedQuantity = item.quantity + 1;
 
           // Update backend immediately inside the callback
-          axios.post("http://localhost:3002/orders/update-quantity", {
+          axios.post("https://greenmart-backend-ext8.onrender.com/orders/update-quantity", {
             idproducts,
             quantity: updatedQuantity,
             userId: user.idusers, // ✅ include this
@@ -150,7 +150,7 @@ const Cart = () => {
           const updatedQuantity = Math.max(1, item.quantity - 1);
 
           // Update backend immediately inside the callback
-          axios.post("http://localhost:3002/orders/update-quantity", {
+          axios.post("https://greenmart-backend-ext8.onrender.com/orders/update-quantity", {
             idproducts,
             quantity: updatedQuantity,
             userId: user.idusers, // ✅ include this
@@ -178,7 +178,7 @@ const Cart = () => {
   
        
     try {
-      const res =  await axios.post("http://localhost:3002/clear-unpaid-orders", {
+      const res =  await axios.post("https://greenmart-backend-ext8.onrender.com/clear-unpaid-orders", {
         idusers: user.idusers,
       });
       
@@ -341,7 +341,7 @@ const Cart = () => {
                     >
                       {/* Render each product item */}
                       <img
-                        src={`http://localhost:3002/ProductImg/${item.image_name}`}
+                        src={`https://greenmart-backend-ext8.onrender.com/ProductImg/${item.image_name}`}
                         alt={item.product_name}
                         className="w-10 h-10 md:w-24 md:h-14 lg:w-28 lg:h-20 rounded-lg object-cover"
                       />
