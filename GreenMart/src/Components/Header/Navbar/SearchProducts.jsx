@@ -18,7 +18,7 @@ const SearchProducts = () => {
   
     // console.log(`Fetching all products to find: ID=${idproducts}, Name=${name}`);
   
-    fetch(`http://localhost:3002/api/products`)
+    fetch(`https://greenmart-backend-ext8.onrender.com/api/products`)
       .then(async (response) => {
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
@@ -48,7 +48,7 @@ const SearchProducts = () => {
     try {
      
   
-      await axios.post("http://localhost:3002/orders", {
+      await axios.post("https://greenmart-backend-ext8.onrender.com/orders", {
         userId: user.idusers,
         productId: product.idproducts,
         quantity: 1,
