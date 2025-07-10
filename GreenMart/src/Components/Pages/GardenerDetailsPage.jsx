@@ -136,7 +136,7 @@ const calculateFee = () => {
     }
   
     try {
-      await axios.post("http://localhost:3002/appoint", {
+      await axios.post("https://greenmart-backend-ext8.onrender.com/appoint", {
         userId,
         gardenerId: gardener.idgardeners,
         duration,
