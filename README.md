@@ -46,46 +46,11 @@ GreenMart is a full-featured e-commerce platform for gardening and plant lovers.
 ![Homepage](./GreenMart/screenshots/Home.png)
 
 ### 🛒 Cart Page  
-![Cart](./GreenMart/screenshotsCartPage.png)
+![Cart](./GreenMart/screenshots/CartPage.png)
 
 ### 📦 Admin Panel  
 ![Admin Panel](./GreenMart/screenshots/AdminPage.png)
 
 ### 🤖 Chatbot  
 ![Chatbot](./GreenMart/screenshots/Chatbot.png)
-
----
-
-## 🚀 Setup Instructions
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/pranjalsalunke30/GreenMart.git
-cd GreenMart
-````
-
-### 2. Install Frontend Dependencies
-
-```bash
-cd GreenMart
-npm install
-npm run dev
-```
-
-### 3. Install Backend Dependencies
-
-```bash
-cd src/Components/Backend
-npm install
-npm start
-```
-
-### 4. Configure Database
-
-* Ensure MySQL server is running
-* Create the required database and tables
-* Update DB credentials in `.env` file (create it if not present)
-
-
 
