@@ -37,7 +37,7 @@ const Navbar = ({ isLoggedIn }) => {
   const product = products.find((p) => p.name === searchQuery);
   // Fetch all products when component mounts
   useEffect(() => {
-    fetch("http://localhost:3002/api/allproducts")
+    fetch("https://greenmart-backend-ext8.onrender.com/api/allproducts")
       .then((response) => response.json())
       .then((data) => {
         if (Array.isArray(data)) {
@@ -92,7 +92,7 @@ const Navbar = ({ isLoggedIn }) => {
 
     if (matchingProduct) {
       fetch(
-        `http://localhost:3002/api/products/${
+        `https://greenmart-backend-ext8.onrender.com/api/products/${
           matchingProduct.idproducts
         }/${encodeURIComponent(trimmedQuery)}`
       )
