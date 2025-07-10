@@ -46,7 +46,7 @@ const Signin = ({ handleSignIn, handleLoginPopup }) => {
       role: "customer",
     };
   
-    fetch("http://localhost:3002/register", {
+    fetch("https://greenmart-backend-ext8.onrender.com/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
