@@ -12,7 +12,7 @@ const Chatbot = () => {
     setInput("");
 
     try {
-      const res = await axios.post("http://localhost:3002/chatbot", { message: input });
+      const res = await axios.post("https://greenmart-backend-ext8.onrender.com/chatbot", { message: input });
       setMessages([...newMessages, { sender: "bot", text: res.data.reply }]);
     } catch (error) {
       setMessages([...newMessages, { sender: "bot", text: "Error! Try again." }]);
