@@ -41,7 +41,7 @@ const OrdersPage = () => {
     console.log("📢 Fetching orders for:", email);
 
     try {
-      const response = await axios.get("http://localhost:3002/myorders", {
+      const response = await axios.get("https://greenmart-backend-ext8.onrender.com/myorders", {
         params: { email },
       });
 
@@ -103,7 +103,7 @@ const OrdersPage = () => {
     if (!reason) return; // If user cancels input
   
     try {
-      const response = await axios.post("http://localhost:3002/update-order-status", {
+      const response = await axios.post("https://greenmart-backend-ext8.onrender.com/update-order-status", {
         orderId: order_id,
         productId: idproducts,
         type, // 👈 This must exist
@@ -188,7 +188,7 @@ const OrdersPage = () => {
     const returnAmount = returnQty * pricePerUnit;
   
     try {
-      const response = await axios.post("http://localhost:3002/update-order-status", {
+      const response = await axios.post("https://greenmart-backend-ext8.onrender.com/update-order-status", {
         orderId: order_id,
         productId: idproducts,
         type, // 👈 This must exist
@@ -268,7 +268,7 @@ const OrdersPage = () => {
                   {/* Left Side - Image */}
                   <div className="w-1/3  rounded-lg">
                     <img
-                      src={`http://localhost:3002/ProductImg/${order.image_name}`}
+                      src={`https://greenmart-backend-ext8.onrender.com/ProductImg/${order.image_name}`}
                       alt={order.product_name}
                       className="w-full h-full object-cover p-2"
                     />
@@ -450,7 +450,7 @@ const OrdersPage = () => {
             {/* Order Info Section */}
             <div className="flex items-center gap-5 bg-gray-100 dark:bg-gray-700 p-4 rounded-lg">
               <img
-                src={`http://localhost:3002/ProductImg/${selectedOrder.image_name}`}
+                src={`https://greenmart-backend-ext8.onrender.com/ProductImg/${selectedOrder.image_name}`}
                 alt={selectedOrder.product_name}
                 className="w-24 h-24 object-cover rounded-lg"
               />
