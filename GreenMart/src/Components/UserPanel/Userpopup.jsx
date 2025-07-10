@@ -20,7 +20,7 @@ const Userpopup = () => {
 
     if (storedEmail) {
       axios
-        .get("http://localhost:3002/getUserByEmail", {
+        .get("https://greenmart-backend-ext8.onrender.com/getUserByEmail", {
           params: { email: storedEmail },
         })
         .then((response) => {
