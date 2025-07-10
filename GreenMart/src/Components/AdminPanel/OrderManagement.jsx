@@ -31,7 +31,7 @@ const OrderManagement = () => {
 
   const fetchOrders = async () => {
     try {
-      const response = await axios.get("http://localhost:3002/api/allorders");
+      const response = await axios.get("https://greenmart-backend-ext8.onrender.com/api/allorders");
 
       // ✅ Do NOT group by user anymore, show separate rows for same user
       setOrders(response.data);
@@ -43,7 +43,7 @@ const OrderManagement = () => {
   const fetchDeliveryBoys = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:3002/api/all-delivery-boys"
+        "https://greenmart-backend-ext8.onrender.com/api/all-delivery-boys"
       );
       setDeliveryBoys(response.data);
     } catch (error) {
@@ -70,7 +70,7 @@ const OrderManagement = () => {
 
       for (let id of orderIds) {
         const response = await axios.put(
-          `http://localhost:3002/api/assign-delivery-boy/${id.trim()}`, // ✅ Assign one by one
+          `https://greenmart-backend-ext8.onrender.com/api/assign-delivery-boy/${id.trim()}`, // ✅ Assign one by one
           { delivery_boy_id: deliveryBoyId }
         );
 
@@ -93,7 +93,7 @@ const OrderManagement = () => {
 
     try {
       const response = await axios.get(
-        `http://localhost:3002/api/delivery-boy/${boyId}`
+        `https://greenmart-backend-ext8.onrender.com/api/delivery-boy/${boyId}`
       );
 
       if (!response.data.length) {
@@ -124,7 +124,7 @@ const handleDelete = async (orderId) => {
   if (!result.isConfirmed) return;
 
   try {
-    await axios.delete(`http://localhost:3002/api/deleteorder/${orderId}`);
+    await axios.delete(`https://greenmart-backend-ext8.onrender.com/api/deleteorder/${orderId}`);
     Swal.fire('Deleted!', 'The order has been deleted.', 'success');
     fetchOrders();
   } catch (error) {
@@ -140,7 +140,7 @@ const handleDelete = async (orderId) => {
 
       // ✅ Fetch all details (User, Orders, Payment)
       const response = await axios.get(
-        `http://localhost:3002/api/orderdetails/${orderId}`
+        `https://greenmart-backend-ext8.onrender.com/api/orderdetails/${orderId}`
       );
 
       if (!response.data || response.data.orders.length === 0) {
@@ -174,7 +174,7 @@ const handleDelete = async (orderId) => {
 
     try {
       await axios.put(
-        `http://localhost:3002/api/remove-delivery-boy/${orderId}`
+        `https://greenmart-backend-ext8.onrender.com/api/remove-delivery-boy/${orderId}`
       );
 
       alert("Delivery Boy removed successfully!");
@@ -201,7 +201,7 @@ const handleDelete = async (orderId) => {
   
     try {
       const response = await axios.put(
-        `http://localhost:3002/api/cancelOrReturnOrder/${orderId}`,
+        `https://greenmart-backend-ext8.onrender.com/api/cancelOrReturnOrder/${orderId}`,
         { type: "return" }
       );
   
@@ -826,7 +826,7 @@ const handleDelete = async (orderId) => {
                             <td className="border p-2 flex justify-center">
                               {order.image_name && (
                                 <img
-                                  src={`http://localhost:3002/ProductImg/${order.image_name}`}
+                                  src={`https://greenmart-backend-ext8.onrender.com/ProductImg/${order.image_name}`}
                                   alt={order.product_name}
                                   className="w-16 h-16 object-cover rounded-lg shadow-md"
                                 />
@@ -880,7 +880,7 @@ const handleDelete = async (orderId) => {
                             <td className="border p-2 flex justify-center">
                               {order.image_name && (
                                 <img
-                                  src={`http://localhost:3002/ProductImg/${order.image_name}`}
+                                  src={`https://greenmart-backend-ext8.onrender.com/ProductImg/${order.image_name}`}
                                   alt={order.product_name}
                                   className="w-16 h-16 object-cover rounded-lg shadow-md"
                                 />
