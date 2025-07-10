@@ -16,7 +16,7 @@ const ProductList = () => {
 
   const fetchProducts = async (subcategory) => {
     try {
-      const response = await axios.get("http://localhost:3002/api/products", {
+      const response = await axios.get("https://greenmart-backend-ext8.onrender.com/api/products", {
         params: { subcategory },
       });
       setProducts(response.data); // Set the fetched products here
@@ -149,7 +149,7 @@ const ProductList = () => {
             {/* left side */}
             <div className="left flex md:flex-col">
               <img
-                           src={`http://localhost:3002/ProductImg/${product.image_name}`}
+                           src={`https://greenmart-backend-ext8.onrender.com/ProductImg/${product.image_name}`}
 
                 className="w-56 md:w-full h-40 mx-auto object-cover rounded-xl"
               />
