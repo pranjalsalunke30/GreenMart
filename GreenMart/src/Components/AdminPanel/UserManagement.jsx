@@ -25,7 +25,7 @@ const UserManagement = () => {
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.get("http://localhost:3002/getadminusers");
+      const response = await axios.get("https://greenmart-backend-ext8.onrender.com/getadminusers");
       setUsers(response.data.users);
     } catch (error) {
       console.error("Error fetching users:", error);
@@ -34,7 +34,7 @@ const UserManagement = () => {
 
   const handleDeleteUser = async (idusers) => {
     try {
-      await axios.delete(`http://localhost:3002/deleteuser/${idusers}`);
+      await axios.delete(`https://greenmart-backend-ext8.onrender.com/deleteuser/${idusers}`);
       fetchUsers();
     } catch (error) {
       console.error("Error deleting user:", error);
@@ -52,7 +52,7 @@ const UserManagement = () => {
 
     try {
       await axios.put(
-        `http://localhost:3002/updateuserstatus/${selectedUser.idusers}`,
+        `https://greenmart-backend-ext8.onrender.com/updateuserstatus/${selectedUser.idusers}`,
         { status: newStatus }
       );
 
@@ -74,7 +74,7 @@ const UserManagement = () => {
     setIsLoading(true);
     try {
       const response = await axios.get(
-        `http://localhost:3002/getUserDetails/${idusers}`
+        `https://greenmart-backend-ext8.onrender.com/getUserDetails/${idusers}`
       );
       setSelectedUserDetails(response.data);
       console.log("Fetched User Details:", response.data); // Debugging
@@ -292,7 +292,7 @@ const UserManagement = () => {
                           <td className="border p-2 text-center">
                             {order.image_name && (
                               <img
-                                src={`http://localhost:3002/ProductImg/${order.image_name}`}
+                                src={`https://greenmart-backend-ext8.onrender.com/ProductImg/${order.image_name}`}
                                 alt={order.product_name}
                                 className="w-20 h-20 object-cover rounded-lg"
                               />
