@@ -9,7 +9,7 @@ const FeedbackTable = () => {
   // Fetch feedbacks
   const fetchFeedbacks = async () => {
     try {
-      const response = await fetch("http://localhost:3002/api/feedback/feedbackp");
+      const response = await fetch("https://greenmart-backend-ext8.onrender.com/api/feedback/feedbackp");
       const data = await response.json();
       setFeedbacks(data);
     } catch (error) {
@@ -39,7 +39,7 @@ const FeedbackTable = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:3002/api/feedback/update-status/${selectedFeedback.id}`,
+        `https://greenmart-backend-ext8.onrender.com/api/feedback/update-status/${selectedFeedback.id}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
@@ -91,7 +91,7 @@ const FeedbackTable = () => {
                   <td className="py-3 px-6">
                     {feedback.image_url ? (
                       <img
-                        src={`http://localhost:3002${feedback.image_url}`}
+                        src={`https://greenmart-backend-ext8.onrender.com${feedback.image_url}`}
                         alt="Feedback"
                         className="w-16 h-16 object-cover rounded-md"
                       />
