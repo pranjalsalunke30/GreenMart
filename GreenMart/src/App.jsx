@@ -45,7 +45,7 @@ import FeedbackPage from "./Components/Pages/FeedbackPage";
 import FeedbackP from "./Components/AdminPanel/FeedbackP";
 import ForgotPassword from "./Components/Registration/ForgotPassword";
 import ResetPassword from "./Components/Registration/resetpassword";
-import Chatbot from "./Components/chatbot";
+
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
