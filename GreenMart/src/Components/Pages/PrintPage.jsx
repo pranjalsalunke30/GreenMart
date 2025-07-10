@@ -29,7 +29,7 @@ const PrintPage = () => {
     }
   
     try {
-      const response = await axios.get("http://localhost:3002/latest-payment-ids", {
+      const response = await axios.get("https://greenmart-backend-ext8.onrender.com/latest-payment-ids", {
         params: { email, order_ids: orderIds.join(",") },
       });
   
@@ -67,7 +67,7 @@ const PrintPage = () => {
     try {
       console.log("🔹 Fetching Payment Details for IDs:", paymentIds);
   
-      const response = await axios.get("http://localhost:3002/payments", {
+      const response = await axios.get("https://greenmart-backend-ext8.onrender.com/payments", {
         params: { payment_ids: paymentIds.join(",") }, // ✅ Convert array to comma-separated string
       });
   
