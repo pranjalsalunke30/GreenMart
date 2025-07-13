@@ -1,5 +1,6 @@
 const express = require("express");
-const mysql = require("mysql");
+const mysql = require('mysql2'); // instead of 'mysql'
+// const mysql = require('mysql'); // instead of 'mysql'
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const bcrypt = require("bcryptjs");
@@ -36,7 +37,7 @@ app.use("/api", forgetRoutes); // Base route for delivery system
 
 // Database Connection
 const db = mysql.createConnection({
-  host: process.env.DB_HOST,
+ host: process.env.DB_HOST,
   port: process.env.DB_PORT,
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
