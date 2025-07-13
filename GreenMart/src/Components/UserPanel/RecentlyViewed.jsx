@@ -61,7 +61,7 @@ const RecentlyViewedPage = () => {
                     <tr key={item.idproducts} className=" transition ">
                       <td className="py-2 px-4 border">
                         <img
-                          src={`http://localhost:3002/ProductImg/${item.image_name}`}
+                          src={`https://greenmart-backend-ext8.onrender.com/ProductImg/${item.image_name}`}
                           alt={item.name}
                           className="w-16 h-16 md:w-20 md:h-20 rounded-lg object-cover"
                         />
