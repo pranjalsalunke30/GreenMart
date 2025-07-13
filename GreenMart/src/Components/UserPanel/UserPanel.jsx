@@ -35,7 +35,7 @@ const UserPanel = () => {
 
       try {
         const response = await fetch(
-          `http://localhost:3002/getUserByEmail?email=${email}`,
+          `https://greenmart-backend-ext8.onrender.com/getUserByEmail?email=${email}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -107,7 +107,7 @@ const UserPanel = () => {
     return;
   }
   try {
-    const response = await fetch("http://localhost:3002/userpanel", {
+    const response = await fetch("https://greenmart-backend-ext8.onrender.com/userpanel", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
