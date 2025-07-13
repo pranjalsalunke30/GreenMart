@@ -26,7 +26,7 @@ const ProductDetails = () => {
 
   const fetchProductDetails = async (subcategory) => {
     try {
-      const response = await axios.get("http://localhost:3002/api/products", {
+      const response = await axios.get("https://greenmart-backend-ext8.onrender.com/api/products", {
         params: { subcategory },
       });
       // Filter the specific product by subcategory and id
