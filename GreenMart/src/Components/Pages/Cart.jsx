@@ -169,7 +169,7 @@ const Cart = () => {
     fetchCart();
   };
   const removeFromCart = async (idproducts) => {
-    await axios.post("http://localhost:3002/orders/remove", { idproducts });
+    await axios.post("https://greenmart-backend-ext8.onrender.com/orders/remove", { idproducts });
     setCart(cart.filter((item) => item.idproducts !== idproducts));
     setCart(paidOrders.filter((item) => item.idproducts !== idproducts));
     fetchCart();
@@ -241,7 +241,7 @@ const Cart = () => {
                     >
                       {/* Render each product item */}
                       <img
-                        src={`http://localhost:3002/ProductImg/${item.image_name}`}
+                        src={`https://greenmart-backend-ext8.onrender.com/ProductImg/${item.image_name}`}
                         alt={item.product_name}
                         className="w-10 h-10 md:w-24 md:h-14 lg:w-28 lg:h-20 rounded-lg object-cover"
                       />
