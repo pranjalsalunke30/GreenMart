@@ -99,7 +99,7 @@ const SearchProducts = () => {
 
         <div className="flex flex-col sm:flex-row items-center gap-6">
           <img
-              src={`http://localhost:3002/ProductImg/${product.image_name}`}
+              src={`https://greenmart-backend-ext8.onrender.com/ProductImg/${product.image_name}`}
             alt={product.name}
             className="w-64 h-64 object-cover rounded-lg shadow-md border border-gray-300 dark:border-gray-700"
           />
