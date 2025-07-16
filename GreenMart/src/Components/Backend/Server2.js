@@ -19,13 +19,13 @@ require("dotenv").config();
 const app = express();
 app.use(cors());
 app.use(express.json());
-// Serve React build static files
-app.use(express.static(path.join(__dirname, "../../GreenMart"))); // ✅ adjust path based on actual structure
+const buildPath = path.join(__dirname, "../../../../build");
 
-// Fallback to index.html for all unmatched routes (SPA support)
+app.use(express.static(buildPath));
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../../GreenMart", "index.html"));
+  res.sendFile(path.join(buildPath, "index.html"));
 });
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
   "/ProductImg",
