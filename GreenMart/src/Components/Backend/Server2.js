@@ -20,11 +20,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 // Serve React build static files
-app.use(express.static(path.join(__dirname, "../../../build"))); // ✅ adjust path based on actual structure
+app.use(express.static(path.join(__dirname, "../../../GreenMart"))); // ✅ adjust path based on actual structure
 
 // Fallback to index.html for all unmatched routes (SPA support)
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../../../build", "index.html"));
+  res.sendFile(path.join(__dirname, "../../../GreenMart", "index.html"));
 });
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
