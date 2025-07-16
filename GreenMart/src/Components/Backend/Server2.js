@@ -19,13 +19,6 @@ require("dotenv").config();
 const app = express();
 app.use(cors());
 app.use(express.json());
-const buildPath = path.join(__dirname, "../../../../build");
-
-app.use(express.static(buildPath));
-app.get("*", (req, res) => {
-  res.sendFile(path.join(buildPath, "index.html"));
-});
-
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
   "/ProductImg",
@@ -41,7 +34,13 @@ app.use("/api", productRoutes);
 app.use("/api/delivery", deliveryRoutes); // Base route for delivery system
 app.use("/api/feedback", feedbackRoutes); // Base route for delivery system
 app.use("/api", forgetRoutes); // Base route for delivery system
+const distPath = path.join(__dirname, "../../../../dist");
+app.use(express.static(distPath));
 
+// 👉 React Router साठी fallback (404 fix)
+app.get("*", (req, res) => {
+  res.sendFile(path.join(distPath, "index.html"));
+});
 // Database Connection
 const db = mysql.createConnection({
  host: process.env.DB_HOST,
