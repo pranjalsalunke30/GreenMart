@@ -34,8 +34,6 @@ app.use("/api", productRoutes);
 app.use("/api/delivery", deliveryRoutes); // Base route for delivery system
 app.use("/api/feedback", feedbackRoutes); // Base route for delivery system
 app.use("/api", forgetRoutes); // Base route for delivery system
-const distPath = path.join(__dirname, "../../../../dist");
-app.use(express.static(distPath));
 
 // 👉 React Router साठी fallback (404 fix)
 app.get("*", (req, res) => {
