@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "start": "node src/Components/Backend/Server2.js"  // (backend चालवण्यासाठी Render वर)
+    "start": "node src/Components/Backend/Server2.js"  
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
