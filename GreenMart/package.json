@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "node src/Components/Backend/Server2.js"  // (backend चालवण्यासाठी Render वर)
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -56,4 +57,5 @@
     "tailwindcss": "^3.4.17",
     "vite": "^6.0.5"
   }
+  
 }
