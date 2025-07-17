@@ -35,10 +35,10 @@ app.use("/api/delivery", deliveryRoutes); // Base route for delivery system
 app.use("/api/feedback", feedbackRoutes); // Base route for delivery system
 app.use("/api", forgetRoutes); // Base route for delivery system
 
-// 👉 React Router साठी fallback (404 fix)
-app.get("*", (req, res) => {
-  res.sendFile(path.join(distPath, "index.html"));
-});
+app.use(cors({
+  origin: 'https://greenmart-frontend-9hg6.onrender.com',
+  credentials: true,
+}));
 // Database Connection
 const db = mysql.createConnection({
  host: process.env.DB_HOST,
