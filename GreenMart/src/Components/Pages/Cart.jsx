@@ -103,7 +103,7 @@ const Cart = () => {
     console.log("Sending latest unpaid group:", latestUnpaidGroup);
 
     try {
-      await axios.post("http://localhost:3002/buy-now", {
+      await axios.post("https://greenmart-backend-ext8.onrender.com/buy-now", {
         cart: latestUnpaidGroup.map((item) => ({
           idproducts: item.idproducts,
           quantity: item.quantity || 1,
